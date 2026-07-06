@@ -1,0 +1,28 @@
+# ===== Font =====
+font-family = "MesloLGS NF"
+font-size = 14
+
+# ===== Theme =====
+theme = Everforest Light Med
+background-opacity = 1.0
+background-blur = false
+
+# ===== Window =====
+macos-titlebar-style = transparent
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+
+# ===== Behavior =====
+term = xterm-ghostty
+env = TERMINFO=/Applications/Ghostty.app/Contents/Resources/terminfo
+env = COLORTERM=truecolor
+env = TERM_PROGRAM=ghostty
+scrollback-limit = 10000
+bold-is-bright = true
+cursor-style = block
+cursor-style-blink = false
+copy-on-select = clipboard
+confirm-close-surface = false
+shell-integration = detect
+shell-integration-features = cursor,no-sudo,title,ssh-env,ssh-terminfo,path

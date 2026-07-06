@@ -1,0 +1,12 @@
+# Local/editor noise
+.DS_Store
+*.swp
+*.swo
+
+# Never commit raw secrets or private key material.
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*

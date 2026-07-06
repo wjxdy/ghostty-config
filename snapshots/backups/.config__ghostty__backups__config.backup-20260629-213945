@@ -1,0 +1,15 @@
+# ===== Font =====
+font-family = "Maple Mono NF CN"
+font-size = 14
+
+# ===== Theme =====
+# 用 Ghostty 内置主题，背景/前景/16色全部自动配齐
+theme = Gruvbox Dark
+
+# ===== Behavior =====
+term = xterm-256color
+scrollback-limit = 10000
+bold-is-bright = true
+cursor-style = block
+cursor-style-blink = false
+

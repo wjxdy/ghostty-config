@@ -1,0 +1,34 @@
+surface-tab-bar-font-size = 12
+
+# Mirrored from iTerm2 profile "Default" (FFE67916-F56D-42A5-9F89-93D78C1C197A).
+font-family = "JetBrainsMonoNF-Bold"
+font-size = 17
+term = xterm-256color
+scrollback-limit = 1000
+bold-is-bright = true
+
+background = #332f2c
+foreground = #ffffff
+cursor-color = #dce2e2
+cursor-text = #ffffff
+cursor-style = block
+cursor-style-blink = false
+selection-background = #363984
+selection-foreground = #f2f2f2
+
+palette = 0=#4f4f4f
+palette = 1=#ff6c60
+palette = 2=#a8ff60
+palette = 3=#ffffb6
+palette = 4=#96cbfe
+palette = 5=#ff73fd
+palette = 6=#c6c5fe
+palette = 7=#eeeeee
+palette = 8=#7c7c7c
+palette = 9=#ffb6b0
+palette = 10=#ceffab
+palette = 11=#ffffcc
+palette = 12=#b5dcfe
+palette = 13=#ff9cfe
+palette = 14=#dfe0fe
+palette = 15=#ffffff
