@@ -1,4 +1,4 @@
-# Ghostty, Starship, and Neovim Configuration
+# Ghostty, Starship, tmux, and Neovim Configuration
 
 This repository contains a Codex-readable snapshot of selected local configuration:
 
@@ -7,8 +7,9 @@ This repository contains a Codex-readable snapshot of selected local configurati
 - Historical Ghostty backups: [`snapshots/ghostty/backups/`](snapshots/ghostty/backups/)
 - Active Starship config snapshot: [`snapshots/starship/current/`](snapshots/starship/current/)
 - Starship backup snapshots: [`snapshots/starship/backups/`](snapshots/starship/backups/)
+- tmux config snapshot: [`snapshots/tmux/current/`](snapshots/tmux/current/)
 - Neovim config snapshots: [`snapshots/nvim/`](snapshots/nvim/)
 
-zsh and tmux configs are intentionally not included.
+zsh config is intentionally not included.
 
 Sensitive values are replaced with `<REDACTED>`. Do not treat this repository as a secret store.

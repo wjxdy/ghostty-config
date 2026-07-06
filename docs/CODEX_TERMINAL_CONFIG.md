@@ -1,8 +1,8 @@
-# Codex Ghostty, Starship, And Neovim Configuration Map
+# Codex Ghostty, Starship, Tmux, And Neovim Configuration Map
 
-Generated: 2026-07-06 14:59:57
+Generated: 2026-07-06 19:24:54
 
-This repository is a Codex-readable map of selected local developer-environment configuration on this Mac. It includes Ghostty, Starship, and Neovim. zsh, tmux, iTerm2, Apple Terminal, and other terminal software are intentionally excluded.
+This repository is a Codex-readable map of selected local developer-environment configuration on this Mac. It includes Ghostty, Starship, tmux, and Neovim. zsh, iTerm2, Apple Terminal, and other terminal software are intentionally excluded.
 
 ## Quick Summary
 
@@ -12,13 +12,15 @@ This repository is a Codex-readable map of selected local developer-environment 
 - Active palette: Catppuccin-like dark palette with `#1e1e2e` background and `#cdd6f4` foreground.
 - Window behavior: transparent macOS titlebar, balanced padding, truecolor environment, clipboard copy-on-select, and shell integration detection.
 - Starship config: `~/.config/starship.toml`, using a Catppuccin Mocha powerline-style prompt with OS, user, directory, git, language runtimes, conda, time, and command duration modules.
+- tmux config: `~/.tmux.conf`, using `Ctrl-A` prefix, vim-style copy mode, mouse support, TPM plugins, Catppuccin/tmux framework, Gruvbox palette overrides, and CPU/MEM status modules.
 - Neovim config: `~/.config/nvim`, based on a Kickstart-style Lua setup with custom plugin modules for theme, file tree, terminal, Rust, Unity, bufferline, autosave, and Trouble.
-- Security: secret-like values are redacted if found. The included Ghostty, Starship, and Neovim files scanned here did not require secret redaction.
+- Security: secret-like values are redacted if found. The included Ghostty, Starship, tmux, and Neovim files scanned here did not require secret redaction.
 
 ## Runtime Versions
 
 - `ghostty app binary`: Ghostty 1.3.1
 - `starship`: starship 1.25.1
+- `tmux`: tmux 3.6a
 - `nvim`: NVIM v0.12.2
 
 ## Installed Terminal Apps
@@ -89,6 +91,7 @@ This repository is a Codex-readable map of selected local developer-environment 
 | starship/current | `/Users/xulei/.config/starship.toml` | `snapshots/starship/current/.config__starship.toml` | 279 | 2026-06-29 21:49:11 | 0 |
 | starship/backups | `/Users/xulei/.config/starship.toml.backup-20260629-214606` | `snapshots/starship/backups/.config__starship.toml.backup-20260629-214606` | 85 | 2026-06-29 21:46:06 | 0 |
 | starship/backups | `/Users/xulei/.config/starship.toml.backup-20260629-214846` | `snapshots/starship/backups/.config__starship.toml.backup-20260629-214846` | 85 | 2026-06-29 21:48:46 | 0 |
+| tmux/current | `/Users/xulei/.tmux.conf` | `snapshots/tmux/current/.tmux.conf` | 146 | 2026-07-04 20:22:58 | 0 |
 | nvim | `/Users/xulei/.config/nvim/.github/ISSUE_TEMPLATE/bug_report.md` | `snapshots/nvim/.config__nvim__.github__ISSUE_TEMPLATE__bug_report.md` | 35 | 2026-05-17 18:47:06 | 0 |
 | nvim | `/Users/xulei/.config/nvim/.github/pull_request_template.md` | `snapshots/nvim/.config__nvim__.github__pull_request_template.md` | 8 | 2026-05-17 18:47:06 | 0 |
 | nvim | `/Users/xulei/.config/nvim/.github/workflows/stylua.yml` | `snapshots/nvim/.config__nvim__.github__workflows__stylua.yml` | 20 | 2026-05-17 18:47:06 | 0 |
@@ -127,15 +130,17 @@ This repository is a Codex-readable map of selected local developer-environment 
 3. Use `snapshots/ghostty/current/` for the active Ghostty config.
 4. Use `snapshots/ghostty/backups/` to understand recent Ghostty config history.
 5. Use `snapshots/starship/current/` for the active Starship config.
-6. Use `snapshots/nvim/` for Neovim config files. Do not expect `.git/` internals there; they are intentionally excluded.
-7. Do not assume shell behavior from this repository because zsh config is intentionally excluded.
-8. Treat every `<REDACTED>` value as intentionally private and do not ask to restore it unless the user explicitly wants secret-management help.
+6. Use `snapshots/tmux/current/` for the active tmux config.
+7. Use `snapshots/nvim/` for Neovim config files. Do not expect `.git/` internals there; they are intentionally excluded.
+8. Do not assume shell behavior from this repository because zsh config is intentionally excluded.
+9. Treat every `<REDACTED>` value as intentionally private and do not ask to restore it unless the user explicitly wants secret-management help.
 
 ## Notes For Future Changes
 
 - Keep `~/.config/ghostty/config` as the canonical Ghostty source.
 - Keep `~/.config/starship.toml` as the canonical Starship source.
+- Keep `~/.tmux.conf` as the canonical tmux source.
 - Keep `~/.config/nvim` as the canonical Neovim source.
 - Prefer preserving the current dark Catppuccin-like visual language unless the user asks for a new theme.
 - Before pushing updates, rerun a secret scan for token, password, key, and credential patterns.
-- Do not add zsh, tmux, iTerm2, Terminal.app, or other terminal software config unless the user explicitly expands the scope.
+- Do not add zsh, iTerm2, Terminal.app, or other terminal software config unless the user explicitly expands the scope.
