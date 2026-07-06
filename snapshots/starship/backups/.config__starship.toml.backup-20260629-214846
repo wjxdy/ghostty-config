@@ -1,0 +1,85 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Pure-style minimal prompt
+# 两行布局：第一行 路径 git，第二行 ❯
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$line_break\
+$character"""
+
+add_newline = true
+
+# TokyoNight palette, matched to the current Ghostty theme.
+palette = "tokyonight"
+
+[palettes.tokyonight]
+fg       = "#c0caf5"
+red      = "#f7768e"
+green    = "#9ece6a"
+yellow   = "#e0af68"
+blue     = "#7aa2f7"
+purple   = "#bb9af7"
+aqua     = "#7dcfff"
+orange   = "#ff9e64"
+gray     = "#565f89"
+
+[directory]
+style = "bold yellow"
+format = "[$path]($style) "
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+[git_branch]
+symbol = ""
+style = "aqua"
+format = "[$branch]($style)"
+
+[git_status]
+style = "orange"
+format = '[$all_status$ahead_behind]($style)'
+conflicted = " ="
+ahead = " ⇡${count}"
+behind = " ⇣${count}"
+diverged = " ⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = ""
+untracked = " ?"
+stashed = " $"
+modified = " *"
+staged = " +"
+renamed = " »"
+deleted = " ✘"
+
+[cmd_duration]
+min_time = 2000
+style = "orange"
+format = " [⏱ $duration]($style)"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
+
+# 全部其他模块默认关掉（保持极简）
+[nodejs]
+disabled = true
+[python]
+disabled = true
+[rust]
+disabled = true
+[golang]
+disabled = true
+[docker_context]
+disabled = true
+[package]
+disabled = true
+[username]
+disabled = true
+[hostname]
+disabled = true
+[os]
+disabled = true

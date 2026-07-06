@@ -1,0 +1,54 @@
+-- 主题候选包：进 nvim 用 :Telescope colorscheme 实时预览切换
+-- 选定后告诉我，我把最后一行的 vim.cmd.colorscheme 改成你定的那个
+
+vim.pack.add {
+  'https://github.com/rebelot/kanagawa.nvim',          -- kanagawa-dragon / kanagawa-wave / kanagawa-lotus
+  'https://github.com/sainnhe/gruvbox-material',       -- gruvbox-material 暖复古橙黄
+  'https://github.com/sainnhe/everforest',             -- everforest 森林绿
+  'https://github.com/EdenEast/nightfox.nvim',         -- nightfox / duskfox / nordfox / dawnfox / dayfox
+  'https://github.com/navarasu/onedark.nvim',          -- onedark Atom 经典
+  'https://github.com/Mofiqul/vscode.nvim',            -- vscode 仿 VSCode Dark+
+  'https://github.com/savq/melange-nvim',              -- melange 暖橙黄文艺
+  'https://github.com/vague2k/vague.nvim',             -- vague 极简水墨
+  'https://github.com/datsfilipe/vesper.nvim',         -- vesper 暖深沙色（卡其调）
+  'https://github.com/kepano/flexoki-neovim',          -- flexoki 暖纸色调（最卡其的浅色，作者是 Obsidian 设计师）
+}
+
+require('kanagawa').setup { theme = 'dragon', transparent = true }
+require('onedark').setup { style = 'dark', transparent = true }
+require('vscode').setup { transparent = true }
+-- melange / flexoki 是纯 colorscheme，没有 setup，直接 :colorscheme 用
+require('vague').setup { transparent = true }
+require('vesper').setup { transparent = true }
+
+vim.g.gruvbox_material_background = 'medium'
+vim.g.gruvbox_material_transparent_background = 2
+vim.g.gruvbox_material_disable_italic_comment = 1
+
+vim.g.everforest_background = 'medium'
+vim.g.everforest_transparent_background = 2
+vim.g.everforest_disable_italic_comment = 1
+
+require('nightfox').setup {
+  options = { transparent = true },
+}
+
+-- 兜底透明：任何主题切换后都把这些高亮组背景设为透明
+vim.api.nvim_create_autocmd('ColorScheme', {
+  callback = function()
+    local groups = {
+      'Normal', 'NormalNC', 'NormalFloat', 'FloatBorder',
+      'SignColumn', 'LineNr', 'EndOfBuffer',
+      'NeoTreeNormal', 'NeoTreeNormalNC', 'NeoTreeEndOfBuffer',
+      'NeoTreeWinSeparator', 'NeoTreeStatusLine',
+      'TelescopeNormal', 'TelescopeBorder',
+      'WhichKeyFloat', 'WhichKeyNormal',
+      'StatusLine', 'StatusLineNC',
+    }
+    for _, g in ipairs(groups) do
+      vim.api.nvim_set_hl(0, g, { bg = 'NONE' })
+    end
+  end,
+})
+
+vim.cmd.colorscheme 'kanagawa-dragon'
