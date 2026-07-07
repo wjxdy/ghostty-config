@@ -1,0 +1,151 @@
+# Gruvbox Dark theme for Yazi
+# 配色与 lazygit / starship / nvim 保持一致
+
+[mgr]
+cwd = { fg = "#fabd2f" }
+
+# Hovered
+hovered         = { fg = "#282828", bg = "#fabd2f", bold = true }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "#fb4934", italic = true }
+find_position = { fg = "#fe8019", bg = "reset", italic = true }
+
+# Marker
+marker_copied   = { fg = "#b8bb26", bg = "#b8bb26" }
+marker_cut      = { fg = "#fb4934", bg = "#fb4934" }
+marker_marked   = { fg = "#83a598", bg = "#83a598" }
+marker_selected = { fg = "#fabd2f", bg = "#fabd2f" }
+
+# Tab
+tab_active   = { fg = "#282828", bg = "#fabd2f" }
+tab_inactive = { fg = "#ebdbb2", bg = "#3c3836" }
+tab_width    = 1
+
+# Count
+count_copied   = { fg = "#282828", bg = "#b8bb26" }
+count_cut      = { fg = "#282828", bg = "#fb4934" }
+count_selected = { fg = "#282828", bg = "#fabd2f" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#928374" }
+
+# Highlighting
+syntect_theme = ""
+
+[mode]
+normal_main = { fg = "#282828", bg = "#fabd2f", bold = true }
+normal_alt  = { fg = "#fabd2f", bg = "#3c3836" }
+select_main = { fg = "#282828", bg = "#b8bb26", bold = true }
+select_alt  = { fg = "#b8bb26", bg = "#3c3836" }
+unset_main  = { fg = "#282828", bg = "#d3869b", bold = true }
+unset_alt   = { fg = "#d3869b", bg = "#3c3836" }
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#3c3836", bg = "#3c3836" }
+
+# Progress
+progress_label  = { fg = "#ffffff", bold = true }
+progress_normal = { fg = "#83a598", bg = "#3c3836" }
+progress_error  = { fg = "#fb4934", bg = "#3c3836" }
+
+# Permissions
+perm_type  = { fg = "#83a598" }
+perm_read  = { fg = "#fabd2f" }
+perm_write = { fg = "#fb4934" }
+perm_exec  = { fg = "#b8bb26" }
+perm_sep   = { fg = "#928374" }
+
+# Owner
+owner_user  = { fg = "#ebdbb2" }
+owner_group = { fg = "#928374" }
+
+[select]
+border   = { fg = "#fabd2f" }
+active   = { fg = "#fe8019" }
+inactive = {}
+
+[input]
+border   = { fg = "#fabd2f" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[confirm]
+border   = { fg = "#fabd2f" }
+title    = { fg = "#fabd2f" }
+content  = {}
+list     = {}
+btn_yes  = { reversed = true }
+btn_no   = {}
+btn_labels = [ "[Y(es)]", "[(N)o]" ]
+
+[completion]
+border   = { fg = "#fabd2f" }
+active   = { bg = "#3c3836" }
+inactive = {}
+
+# Icons
+icon_file    = { fg = "#83a598" }
+icon_folder  = { fg = "#fabd2f" }
+icon_command = { fg = "#fb4934" }
+
+[tasks]
+border  = { fg = "#fabd2f" }
+title   = {}
+hovered = { fg = "#fe8019", underline = true }
+
+[which]
+mask            = { bg = "#3c3836" }
+cand            = { fg = "#83a598" }
+rest            = { fg = "#a89984" }
+desc            = { fg = "#fe8019" }
+separator       = "  "
+separator_style = { fg = "#665c54" }
+
+[help]
+on      = { fg = "#fe8019" }
+run     = { fg = "#83a598" }
+desc    = { fg = "#a89984" }
+hovered = { bg = "#3c3836", bold = true }
+footer  = { fg = "#3c3836", bg = "#ebdbb2" }
+
+[notify]
+title_info  = { fg = "#b8bb26" }
+title_warn  = { fg = "#fabd2f" }
+title_error = { fg = "#fb4934" }
+icon_info   = ""
+icon_warn   = ""
+icon_error  = ""
+
+# File-specific
+[filetype]
+rules = [
+  # Images
+  { mime = "image/*", fg = "#d3869b" },
+
+  # Videos
+  { mime = "video/*", fg = "#fe8019" },
+  { mime = "audio/*", fg = "#fe8019" },
+
+  # Archives
+  { mime = "application/zip",             fg = "#fb4934" },
+  { mime = "application/gzip",            fg = "#fb4934" },
+  { mime = "application/x-tar",           fg = "#fb4934" },
+  { mime = "application/x-bzip",          fg = "#fb4934" },
+  { mime = "application/x-bzip2",         fg = "#fb4934" },
+  { mime = "application/x-7z-compressed", fg = "#fb4934" },
+  { mime = "application/x-rar",           fg = "#fb4934" },
+
+  # Documents
+  { mime = "application/pdf",  fg = "#83a598" },
+  { mime = "text/*",            fg = "#ebdbb2" },
+
+  # Fallback
+  { mime = "*",          fg = "#ebdbb2" },
+  { mime = "inode/directory", fg = "#fabd2f" },
+]

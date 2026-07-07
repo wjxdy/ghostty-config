@@ -1,0 +1,42 @@
+[flavor]
+dark = "catppuccin-mocha"
+light = "catppuccin-mocha"
+
+[filetype]
+rules = [
+  # Folders
+  { url = "*/", fg = "#89b4fa", bold = true },
+
+  # Images
+  { mime = "image/*", fg = "#94e2d5" },
+
+  # Audio / video
+  { mime = "{audio,video}/*", fg = "#f9e2af" },
+
+  # Archives
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#f5c2e7" },
+  { url = "*.{zip,rar,7z,tar,gz,xz,zst,bz2,lzma,dmg,pkg}", fg = "#f5c2e7" },
+
+  # Documents
+  { mime = "application/{pdf,doc,rtf}", fg = "#a6e3a1" },
+  { url = "*.{pdf,doc,docx,rtf,ppt,pptx,xls,xlsx,csv}", fg = "#a6e3a1" },
+
+  # Config / data
+  { url = "*.{json,toml,yaml,yml,xml,ini,conf,env,lock}", fg = "#f9e2af" },
+  { url = "{Dockerfile,Makefile,README*,LICENSE,CHANGELOG*}", fg = "#f9e2af", bold = true },
+
+  # Code
+  { url = "*.{js,jsx,ts,tsx,mjs,cjs,vue,svelte}", fg = "#f9e2af" },
+  { url = "*.{py,rb,php,java,kt,go,rs,c,cpp,h,hpp,swift}", fg = "#89b4fa" },
+  { url = "*.{sh,bash,zsh,fish,ps1}", fg = "#a6e3a1" },
+  { url = "*.{html,css,scss,sass,less}", fg = "#fab387" },
+  { url = "*.{md,markdown,txt}", fg = "#cba6f7" },
+
+  # Git / hidden
+  { url = ".git*", fg = "#f38ba8" },
+  { url = ".*", fg = "#6c7086" },
+
+  # Special states
+  { mime = "vfs/{absent,stale}", fg = "#9399b2" },
+  { url = "*", fg = "#cdd6f4" },
+]

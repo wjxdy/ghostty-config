@@ -1,8 +1,8 @@
 # Codex Ghostty, Starship, Tmux, And Neovim Configuration Map
 
-Generated: 2026-07-06 19:24:54
+Generated: 2026-07-07 23:14:53
 
-This repository is a Codex-readable map of selected local developer-environment configuration on this Mac. It includes Ghostty, Starship, tmux, and Neovim. zsh, iTerm2, Apple Terminal, and other terminal software are intentionally excluded.
+This repository is a Codex-readable map of selected local developer-environment configuration on this Mac. It includes Ghostty, Starship, tmux, Neovim, and yazi. zsh, LazyGit, iTerm2, Apple Terminal, and other terminal software are intentionally excluded.
 
 ## Quick Summary
 
@@ -14,7 +14,9 @@ This repository is a Codex-readable map of selected local developer-environment 
 - Starship config: `~/.config/starship.toml`, using a Catppuccin Mocha powerline-style prompt with OS, user, directory, git, language runtimes, conda, time, and command duration modules.
 - tmux config: `~/.tmux.conf`, using `Ctrl-A` prefix, vim-style copy mode, mouse support, TPM plugins, Catppuccin/tmux framework, Gruvbox palette overrides, and CPU/MEM status modules.
 - Neovim config: `~/.config/nvim`, based on a Kickstart-style Lua setup with custom plugin modules for theme, file tree, terminal, Rust, Unity, bufferline, autosave, and Trouble.
-- Security: secret-like values are redacted if found. The included Ghostty, Starship, tmux, and Neovim files scanned here did not require secret redaction.
+- yazi config: `~/.config/yazi`, including Catppuccin Mocha flavor files and full-border plugin files.
+- Ghostty color source map: `docs/GHOSTTY_COLOR_SOURCES.md`, explaining that Ghostty base colors, Starship prompt colors, zsh syntax highlighting, vivid/eza, and bat together create the colored text experience.
+- Security: secret-like values are redacted if found. The included Ghostty, Starship, tmux, Neovim, and yazi files scanned here did not require secret redaction.
 
 ## Runtime Versions
 
@@ -122,6 +124,20 @@ This repository is a Codex-readable map of selected local developer-environment 
 | nvim | `/Users/xulei/.config/nvim/lua/kickstart/plugins/lint.lua` | `snapshots/nvim/.config__nvim__lua__kickstart__plugins__lint.lua` | 53 | 2026-05-17 18:47:06 | 0 |
 | nvim | `/Users/xulei/.config/nvim/lua/kickstart/plugins/neo-tree.lua` | `snapshots/nvim/.config__nvim__lua__kickstart__plugins__neo-tree.lua` | 26 | 2026-05-17 18:47:06 | 0 |
 | nvim | `/Users/xulei/.config/nvim/nvim-pack-lock.json` | `snapshots/nvim/.config__nvim__nvim-pack-lock.json` | 168 | 2026-06-04 23:42:36 | 0 |
+| yazi | `/Users/xulei/.config/yazi/flavors/catppuccin-mocha.yazi/LICENSE` | `snapshots/yazi/.config__yazi__flavors__catppuccin-mocha.yazi__LICENSE` | 21 | 2026-06-29 21:54:27 | 0 |
+| yazi | `/Users/xulei/.config/yazi/flavors/catppuccin-mocha.yazi/LICENSE-tmtheme` | `snapshots/yazi/.config__yazi__flavors__catppuccin-mocha.yazi__LICENSE-tmtheme` | 21 | 2026-06-29 21:54:27 | 0 |
+| yazi | `/Users/xulei/.config/yazi/flavors/catppuccin-mocha.yazi/README.md` | `snapshots/yazi/.config__yazi__flavors__catppuccin-mocha.yazi__README.md` | 36 | 2026-06-29 21:54:27 | 0 |
+| yazi | `/Users/xulei/.config/yazi/flavors/catppuccin-mocha.yazi/flavor.toml` | `snapshots/yazi/.config__yazi__flavors__catppuccin-mocha.yazi__flavor.toml` | 215 | 2026-06-29 21:54:27 | 0 |
+| yazi | `/Users/xulei/.config/yazi/flavors/catppuccin-mocha.yazi/preview.png` | `snapshots/yazi/.config__yazi__flavors__catppuccin-mocha.yazi__preview.png` | 6440 | 2026-06-29 21:54:27 | 0 |
+| yazi | `/Users/xulei/.config/yazi/flavors/catppuccin-mocha.yazi/tmtheme.xml` | `snapshots/yazi/.config__yazi__flavors__catppuccin-mocha.yazi__tmtheme.xml` | 2112 | 2026-06-29 21:54:27 | 1 |
+| yazi | `/Users/xulei/.config/yazi/init.lua` | `snapshots/yazi/.config__yazi__init.lua` | 1 | 2026-06-29 21:56:14 | 0 |
+| yazi | `/Users/xulei/.config/yazi/package.toml` | `snapshots/yazi/.config__yazi__package.toml` | 9 | 2026-06-29 22:05:06 | 0 |
+| yazi | `/Users/xulei/.config/yazi/plugins/full-border.yazi/LICENSE` | `snapshots/yazi/.config__yazi__plugins__full-border.yazi__LICENSE` | 21 | 2026-06-29 21:56:09 | 0 |
+| yazi | `/Users/xulei/.config/yazi/plugins/full-border.yazi/README.md` | `snapshots/yazi/.config__yazi__plugins__full-border.yazi__README.md` | 32 | 2026-06-29 21:56:09 | 0 |
+| yazi | `/Users/xulei/.config/yazi/plugins/full-border.yazi/main.lua` | `snapshots/yazi/.config__yazi__plugins__full-border.yazi__main.lua` | 44 | 2026-06-29 21:56:09 | 0 |
+| yazi | `/Users/xulei/.config/yazi/theme.toml` | `snapshots/yazi/.config__yazi__theme.toml` | 42 | 2026-06-29 22:05:31 | 0 |
+| yazi | `/Users/xulei/.config/yazi/theme.toml.backup-20260629-215426` | `snapshots/yazi/.config__yazi__theme.toml.backup-20260629-215426` | 151 | 2026-06-29 21:54:26 | 0 |
+| yazi | `/Users/xulei/.config/yazi/yazi.toml` | `snapshots/yazi/.config__yazi__yazi.toml` | 47 | 2026-06-04 23:31:30 | 0 |
 
 ## How Codex Should Use This Repository
 
@@ -132,8 +148,10 @@ This repository is a Codex-readable map of selected local developer-environment 
 5. Use `snapshots/starship/current/` for the active Starship config.
 6. Use `snapshots/tmux/current/` for the active tmux config.
 7. Use `snapshots/nvim/` for Neovim config files. Do not expect `.git/` internals there; they are intentionally excluded.
-8. Do not assume shell behavior from this repository because zsh config is intentionally excluded.
-9. Treat every `<REDACTED>` value as intentionally private and do not ask to restore it unless the user explicitly wants secret-management help.
+8. Use `snapshots/yazi/` for yazi config, flavor, plugin, and preview assets.
+9. Read `docs/GHOSTTY_COLOR_SOURCES.md` before changing Ghostty, Starship, or shell color behavior.
+10. Do not assume full shell behavior from this repository because zsh config is intentionally excluded; only color-source excerpts are documented.
+11. Treat every `<REDACTED>` value as intentionally private and do not ask to restore it unless the user explicitly wants secret-management help.
 
 ## Notes For Future Changes
 
@@ -141,6 +159,7 @@ This repository is a Codex-readable map of selected local developer-environment 
 - Keep `~/.config/starship.toml` as the canonical Starship source.
 - Keep `~/.tmux.conf` as the canonical tmux source.
 - Keep `~/.config/nvim` as the canonical Neovim source.
+- Keep `~/.config/yazi` as the canonical yazi source.
 - Prefer preserving the current dark Catppuccin-like visual language unless the user asks for a new theme.
 - Before pushing updates, rerun a secret scan for token, password, key, and credential patterns.
-- Do not add zsh, iTerm2, Terminal.app, or other terminal software config unless the user explicitly expands the scope.
+- Do not add full zsh, LazyGit, iTerm2, Terminal.app, or other terminal software config unless the user explicitly expands the scope.
